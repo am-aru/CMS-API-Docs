@@ -14,3 +14,34 @@ The **Content Management API** allows developers to manage **blog posts** throug
 ---
 
 ## 📌 Base URL  
+https://api.example.com/v1
+
+📌 **Note:** Replace `api.example.com` with the actual deployed API URL.
+
+---
+
+## 📌 Authentication & Headers  
+- **Public endpoints (GET requests) do not require authentication.**  
+- **POST, PUT, DELETE requests require an API Key** in the header.  
+
+📌 **Headers Example (Authenticated Requests)**  
+```json
+{
+  "Authorization": "Bearer <YOUR_API_KEY>",
+  "Content-Type": "application/json"
+}
+📌 API Endpoints
+
+1️⃣ Fetch All Blog Posts (Public)
+	•	Endpoint: GET /posts
+	•	Response Example (Success - 200):
+
+[
+  {
+    "id": 1,
+    "title": "Introduction to JavaScript",
+    "content": "JavaScript is a powerful scripting language...",
+    "author": "John Doe",
+    "published_at": "2024-02-01"
+  }
+]
