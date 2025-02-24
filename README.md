@@ -8,19 +8,19 @@
 
 ---
 
-## 📌 Introduction  
+### Introduction  
 The **Content Management API** allows developers to manage **blog posts** through a **RESTful API** built with **JavaScript (Node.js & Express)**. This API supports **CRUD operations** (Create, Read, Update, Delete) and integrates easily with front-end applications using **JavaScript & CSS**.
 
 ---
 
-### 📌 Base URL  
+### Base URL  
 https://api.example.com/v1
 
 📌 **Note:** Replace `api.example.com` with the actual deployed API URL.
 
 ---
 
-### 📌 Authentication & Headers  
+### Authentication & Headers  
 - **Public endpoints (GET requests) do not require authentication.**  
 - **POST, PUT, DELETE requests require an API Key** in the header.  
 
@@ -88,8 +88,7 @@ fetch("https://api.example.com/v1/posts")
   .then(data => console.log(data))
   .catch(error => console.log("Error fetching posts:", error));
 ```
-📌 Error Handling
-## 📌 Error Handling Table  
+📌 Error Handling  
 
 | **Error Code** | **Message**     | **Description**                             |
 |--------------|---------------|-----------------------------------------|
