@@ -42,8 +42,63 @@ https://api.example.com/v1
     "id": 1,
     "title": "Introduction to JavaScript",
     "content": "JavaScript is a powerful scripting language...",
-    "author": "John Doe",
+    "author": "Arpita",
     "published_at": "2024-02-01"
   }
 ]
 ```
+2️⃣ Create a New Blog Post (Requires API Key)
+	•	Endpoint: POST /posts
+	•	Headers Required:
+ ```
+{
+  "Authorization": "Bearer <YOUR_API_KEY>"
+}
+```
+• Request Body (JSON):
+```
+{
+  "title": "How to Use JavaScript Fetch API",
+  "content": "The Fetch API in JavaScript is used to make HTTP requests...",
+  "author": "Alice Johnson"
+}
+```
+3️⃣ Update a Blog Post (Requires API Key)
+	•	Endpoint: PUT /posts/{postId}
+	•	Headers Required:
+ ```
+{
+  "Authorization": "Bearer <YOUR_API_KEY>"
+}
+```
+4️⃣ Delete a Blog Post (Requires API Key)
+	•	Endpoint: DELETE /posts/{postId}
+	•	Response Example (Success - 200):
+ ```
+{
+  "message": "Post deleted successfully"
+}
+```
+📌 How to Use This API with JavaScript
+
+Developers can fetch posts and display them in the frontend using JavaScript Fetch API.
+```
+fetch("https://api.example.com/v1/posts")
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.log("Error fetching posts:", error));
+```
+📌 Error Handling
+## 📌 Error Handling Table  
+
+| **Error Code** | **Message**     | **Description**                             |
+|--------------|---------------|-----------------------------------------|
+| **400**     | `Bad Request`  | Missing required fields.               |
+| **401**     | `Unauthorized` | Invalid API key.                       |
+| **403**     | `Forbidden`    | API key missing or expired.            |
+| **404**     | `Not Found`    | Requested blog post doesn’t exist.     |
+
+
+
+	
+
